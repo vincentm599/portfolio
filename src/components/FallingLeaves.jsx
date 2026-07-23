@@ -4,7 +4,10 @@ import { useGLTF } from "@react-three/drei";
 
 function Leaf({ startX, startY, startZ, speed }) {
   const ref = useRef();
-  useGLTF(`${import.meta.env.BASE_URL}models/leaf.glb`);
+
+  const { scene } = useGLTF(
+    `${import.meta.env.BASE_URL}models/leaf.glb`
+  );
 
   const leaf = useMemo(() => scene.clone(), [scene]);
 
@@ -16,17 +19,17 @@ function Leaf({ startX, startY, startZ, speed }) {
 
     // Léger vent
     ref.current.position.x +=
-  Math.sin(state.clock.elapsedTime * speed * 5 + startX) *
-  (0.002 + Math.random() * 0.001);
+      Math.sin(state.clock.elapsedTime * speed * 5 + startX) *
+      0.002;
 
-ref.current.position.z +=
-  Math.cos(state.clock.elapsedTime * speed * 4 + startZ) *
-  (0.001 + Math.random() * 0.001);
+    ref.current.position.z +=
+      Math.cos(state.clock.elapsedTime * speed * 4 + startZ) *
+      0.001;
 
     // Rotation
     ref.current.rotation.x += delta * (0.1 + speed);
-ref.current.rotation.y += delta * (0.2 + speed * 0.5);
-ref.current.rotation.z += delta * (0.3 + speed * 0.8);
+    ref.current.rotation.y += delta * (0.2 + speed * 0.5);
+    ref.current.rotation.z += delta * (0.3 + speed * 0.8);
 
     // Recommence en haut
     if (ref.current.position.y < 0) {
