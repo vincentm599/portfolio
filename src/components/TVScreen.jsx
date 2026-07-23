@@ -4,11 +4,12 @@ import * as THREE from "three";
 export default function TVScreen() {
   const video = useMemo(() => {
     const v = document.createElement("video");
-    v.src = "/videos/tv.mp4";
+    v.src = `${import.meta.env.BASE_URL}videos/tv.mp4`;
     v.loop = true;
     v.muted = true;
     v.playsInline = true;
     v.autoplay = true;
+    v.crossOrigin = "anonymous";
     return v;
   }, []);
 
