@@ -9,7 +9,7 @@ export default function PaperCV({ visible, onClose }) {
 
   const texture = useLoader(
     THREE.TextureLoader,
-    "/images/cv.jpg"
+    `${import.meta.env.BASE_URL}cv.jpg`
   );
 
   const animation = useSpring({

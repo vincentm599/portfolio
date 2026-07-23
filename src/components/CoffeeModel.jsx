@@ -11,7 +11,7 @@ import { Html } from "@react-three/drei";
 
 
 export default function CoffeeModel({ onPaperClick }) {
-  const { scene } = useGLTF("/models/coffee.glb");
+  const { scene } = useGLTF(`${import.meta.env.BASE_URL}models/coffee.glb`);
 
   const signRef = useRef(null);
   const coffeeRef = useRef(null);

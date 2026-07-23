@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 
 function Leaf({ startX, startY, startZ, speed }) {
   const ref = useRef();
-  const { scene } = useGLTF("/models/leaf.glb");
+  useGLTF(`${import.meta.env.BASE_URL}models/leaf.glb`);
 
   const leaf = useMemo(() => scene.clone(), [scene]);
 
