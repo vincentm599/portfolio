@@ -72,10 +72,6 @@ export default function CoffeeModel({ onPaperClick }) {
       signRef.current.material.emissiveIntensity = Math.max(0, intensity);
     }
 
-    // Café
-    if (coffeeRef.current) {
-      coffeeRef.current.rotation.y += 0.05;
-    }
 
     // Journal
     if (newspaperRef.current) {

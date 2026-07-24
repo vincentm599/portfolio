@@ -1,11 +1,11 @@
 import CoffeeModel from "./CoffeeModel";
-import FallingLeaves from "./FallingLeaves";
+
 import Lights from "./Lights";
 import Effects from "./Effects";
-import Steam from "./Steam";
+
 import { useState } from "react";
 import PaperCV from "./PaperCV";
-import Bugs from "./Bugs";
+
 
 
 
@@ -42,21 +42,19 @@ export default function CoffeeScene() {
       {/* Lumières */}
       <Lights />
 
-      <Bugs />
 
       {/* Modèle principal */}
       <CoffeeModel
   onPaperClick={() => setShowCV(true)}
 />
 
-      {/* Feuilles */}
-      <FallingLeaves />
+  
 
       {/* Bloom */}
       <Effects />
 
 
-      <Steam />
+    
 
 
 
