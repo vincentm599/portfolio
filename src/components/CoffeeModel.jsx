@@ -1,12 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-
-import Cat from "./Cat";
 import RestaurantSign from "./RestaurantSign";
 import Customer from "./Customer";
 import Waiter from "./Waiter";
-import TVScreen from "./TVScreen";
 import { Html } from "@react-three/drei";
 
 
@@ -176,12 +173,9 @@ if (
 )}
 
       <RestaurantSign scene={scene} />
-      <Cat scene={scene} />
 
       <Customer scene={scene} objectName="Node_1" />
       <Customer scene={scene} objectName="mesh_0001" />
-
-      <TVScreen />
 
       <Waiter scene={scene} />
     </>
